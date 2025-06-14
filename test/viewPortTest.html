@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 👇 뷰포트 메타 태그 추가! 👇 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰포트 있음 예제</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 980px; /* 아직 데스크톱 너비 유지 (다음 단계에서 수정 필요) */
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid blue; /* 구분을 위해 색상 변경 */
+            background-color: #e0e0ff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>뷰포트 설정이 있을 때</h1>
+    <p>이 페이지에는 뷰포트 메타 태그가 있습니다. 스마트폰에서 이 페이지를 보면 페이지의 너비가 기기 화면 너비에 맞춰지고, 초기 확대/축소 비율이 1.0으로 설정됩니다. 하지만 내부 컨텐츠(.container)의 너비가 980px로 고정되어 있어 가로 스크롤이 생길 수 있습니다.</p>
+    <img src="https://i.pinimg.com/736x/ea/6d/b0/ea6db08ada68058b9046bf772a66d3a8.jpg
+" alt="넓은 이미지">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+</div>
+</body>
+</html>

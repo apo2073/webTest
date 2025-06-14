@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 연습</title>
+  <style>
+    #container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 100px 1fr 150px;
+      grid-template-areas:
+              "header header"
+              "sidebar content"
+              "footer footer";
+    }
+    .header {
+      grid-area: header;
+      background-color: #3498db;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #2ecc71;
+    }
+    .content {
+      grid-area: content;
+      background-color: #e74c3c;
+    }
+    .footer {
+      grid-area: footer;
+      background-color: #f39c12;
+    }
+  </style>
+</head>
+<body>
+<script defer src="js/test.js"></script>
+<p id="greeting"></p>
+
+<div id="js_test">
+  <h1 id="main_text">DOM 조작 테스트</h1>
+  <p class="content-text">Test text first</p>
+  <p class="content-text">Test text second</p>
+</div>
+
+<button id="myButton">나를 클릭해봐!</button>
+<p id="message"></p>
+
+<label for="myInput"></label><input id="myInput" placeholder="여기에 입력하세요" type="text">
+<p id="inputValueDisplay"></p>
+
+<div id="hoverBox" style="width: 100px; height: 100px; background-color: lightblue; margin-top: 10px;">
+  마우스를 올려보세요
+</div>
+
+
+<div id="container">
+  <div class="item header">Header</div>
+  <div class="item sidebar">Sidebar</div>
+  <div class="item content">Content</div>
+  <div class="item footer">Footer</div>
+</div>
+</body>
+</html>

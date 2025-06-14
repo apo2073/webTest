@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='publish/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="chrome://branding/content/about-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <script>
+        function hljsAll() {
+            hljs.highlightAll();
+        }
+        hljsAll();
+    </script>
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <script type="module" src="js/glScript.js"></script>
+    <script type="module" src="js/comment.js"></script>
+<!--    <div class="loading-screen" id="loading">-->
+<!--        <h1>WELCOME</h1>-->
+<!--        <p>로딩 중...</p>-->
+<!--    </div>-->
+
+    <div class="circle-cursor" id="cursor"></div>
+    <div class="logo">
+        <img alt="logo" src="">
+        <a>apo2073</a>
+    </div>
+    <div id="top">
+        <br>
+        <div class="welcome-box">
+            <h2>Hello,</h2>
+            <h2>WELCOME</h2>
+        </div>
+        <pre id="code">
+            <code class="language-kotlin" id="codeK" onclick="hello()">
+                class Main {
+                    private val welcome="Hello"
+                    fun main() {
+                        println("${welcome}, World!")
+                    }
+                }
+            </code>
+            <code class="language-java" id="codeJ" onclick="hello()">
+                class Main {
+                    private String welcome="Hello";
+                    public static void main(String[] args) {
+                        System.out.println(welcome+", World!");
+                    }
+                }
+            </code>
+        </pre>
+
+        <div id="console" class="cmd">
+            <div class="console-header" id="consoleHeader">
+                <span>▶ Console</span>
+                <button class="close-btn" onclick="closePopup()">×</button>
+            </div>
+            <div class="console-body">
+                <div id="console-content">
+                    <p id="console-log">[ Log ] Hello, World!</p>
+                </div>
+                <label for="console-input">user@root ></label>
+                <input type="text" id="console-input" placeholder="Type a command...">
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="github">
+            <i class="fa fa-github visible" id="githubIcon" style="font-size:72px">
+                <a class="visible" style="font-size: 32px" href="https://github.com/apo2073" id="gitlink" target="_blank">apo2073</a>
+            </i>
+
+            <div class="repos">
+                <img class="repo visible" src="https://github-readme-stats.vercel.app/api/pin/?username=apo2073&repo=skchzzk" alt="skchzzk">
+                <img class="repo visible" src="https://github-readme-stats.vercel.app/api/pin/?username=apo2073&repo=youtubeliv" alt="youtubeLiv">
+                <img class="repo visible" src="https://github-readme-stats.vercel.app/api/pin/?username=apo2073&repo=toonationLiv" alt="toonationLiv">
+            </div>
+        </div>
+    </div>
+    <div class="webgl-canvas">
+        <a></a>
+        <canvas
+                id="webglCanvas"
+                width="1000"
+                height="600"
+                style="background-color: black"
+        >
+            Your browser doesn't appear to support the HTML5
+            <code>&lt;canvas&gt;</code> element.
+        </canvas>
+    </div>
+
+    <div class="background">
+        <iframe
+                hidden="hidden"
+                width="0"
+                height="0"
+                src="https://www.youtube.com/embed/dvhc-s6XHbg?autoplay=1&loop=1&controls=0&mute=0"
+                allow="autoplay"
+        ></iframe>
+    </div>
+
+    <div class="comment">
+        <div class="comment-box">
+            <h4>💬 댓글</h4>
+            <label for="usernameInput"></label><input type="text" id="usernameInput" placeholder="이름 (기본: 익명)">
+            <label for="commentInput">
+            </label><textarea id="commentInput" placeholder="댓글을 입력하세요..."></textarea>
+            <button id="commentSubmit">등록</button>
+            <div id="commentList" class="comment-list"></div>
+        </div>
+    </div>
+
+    <!--    <script>-->
+<!--        window.addEventListener("load", () => {-->
+<!--            setTimeout(() => {-->
+<!--                document.getElementById("loading").style.display = "none";-->
+<!--                document.getElementById("mainContent").style.display = "block";-->
+<!--            }, 0);-->
+<!--        });-->
+<!--    </script>-->
+
+    <footer>
+        <p class="foot">apo2073@outlook.com</p>
+        <p class="foot">&copy; 2025 APO2073. All rights reserved</p>
+    </footer>
+</body>
+</html>

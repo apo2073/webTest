@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>샘플 페이지</title>
+  <style>
+    /* style.css 수정 */
+
+    /* ... (body, header, nav 등 이전 스타일 유지) ... */
+
+    main {
+      /* width: 960px; /* 기존 고정 너비 주석 처리 또는 삭제 */
+      max-width: 960px; /* 최대 너비는 유지하되, 화면이 작아지면 줄어들도록 */
+      width: 90%;       /* 화면 너비의 90%를 사용 */
+      margin: 20px auto; /* 위, 아래로 20px, 좌우는 자동으로 */
+      overflow: hidden;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .content-area {
+      /* width: 600px; */
+      width: 65%; /* main 너비의 65% */
+      float: left; /* 요소를 나열할 때 왼쪽부터 차례대로 나열, 칸이 모자라면 아래로 */
+      padding-right: 5%; /* 사이드바와의 간격 */
+      box-sizing: border-box; /* padding을 너비 계산에 포함 */
+    }
+
+    .sidebar {
+      /* width: 300px; */
+      width: 30%; /* main 너비의 30% */
+      float: right;
+      background-color: #eee;
+      padding: 15px;
+      box-sizing: border-box; /* padding을 너비 계산에 포함 */
+    }
+
+    .content-area img {
+      max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 100%로 제한 */
+      height: auto;    /* 이미지의 가로세로 비율 유지 */
+      display: block;  /* 이미지 아래 불필요한 여백 제거 (선택 사항) */
+    }
+    /* ... (footer 등 이전 스타일 유지) ... */
+  
+    @media(max-width: 480px) {
+
+    }
+    
+  </style>
+</head>
+<body>
+<header>
+  <h1>내 웹사이트</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">홈</a></li>
+    <li><a href="#">소개</a></li>
+    <li><a href="#">서비스</a></li>
+    <li><a href="#">연락처</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="content-area">
+    <h2>본문 영역</h2>
+    <p>이곳은 주 콘텐츠가 들어가는 영역입니다. 예를 들어 블로그 글, 기사, 설명 등이 여기에 위치합니다.</p>
+    <img src="https://via.placeholder.com/500x300&quot; alt="샘플 이미지">
+    <p>이미지는 부모 너비의 100%를 넘지 않도록 설정되어 있으며, 반응형으로 동작합니다.</p>
+  </div>
+  <aside class="sidebar">
+    <h3>사이드바</h3>
+    <p>이곳은 추가 정보, 링크, 광고 등이 들어가는 영역입니다.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2025 내 웹사이트. 모든 권리 보유.</p>
+</footer>
+</body>
+</html>

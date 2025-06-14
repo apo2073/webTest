@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션 예제</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="hero-lightpass" />
+
+<script>
+    // HTML 문서의 루트 요소를 가져옴
+    const html = document.documentElement;
+    // id가 "hero-lightpass"인 canvas 요소를 가져옴
+    const canvas = document.getElementById("hero-lightpass");
+    // 2D 그리기 컨텍스트를 가져옴
+    const context = canvas.getContext("2d");
+
+    // 전체 프레임 수 정의
+    const frameCount = 148;
+    // 프레임 인덱스를 받아 해당 프레임의 이미지 URL을 반환하는 함수
+    const currentFrame = index => (
+        `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+    )
+
+    // 모든 프레임 이미지를 미리 로드하는 함수
+    const preloadImages = () => {
+        for (let i = 1; i < frameCount; i++) {
+            const img = new Image();
+            img.src = currentFrame(i);
+        }
+    };
+
+    // 첫 번째 프레임 이미지를 위한 Image 객체 생성
+    const img = new Image()
+    // 첫 번째 프레임 이미지 URL 설정
+    img.src = currentFrame(1);
+    // 캔버스 크기 설정
+    canvas.width = 1158;
+    canvas.height = 770;
+    // 이미지가 로드되면 캔버스에 그림
+    img.onload = function() {
+        context.drawImage(img, 0, 0);
+    }
+
+    // 현재 프레임 인덱스에 맞는 이미지를 캔버스에 그림
+    const updateImage = index => {
+        img.src = currentFrame(index);
+        context.drawImage(img, 0, 0);
+    }
+
+    // 스크롤 이벤트 발생 시 프레임 인덱스를 계산하여 이미지 업데이트
+    window.addEventListener('scroll', () => {
+        const scrollTop = html.scrollTop; // 현재 스크롤 위치
+        const maxScrollTop = html.scrollHeight - window.innerHeight; // 최대 스크롤 값
+        const scrollFraction = scrollTop / maxScrollTop; // 스크롤 비율
+        const frameIndex = Math.min(
+            frameCount - 1,
+            Math.ceil(scrollFraction * frameCount)
+        );
+
+        // 애니메이션 프레임 요청하여 이미지 업데이트
+        requestAnimationFrame(() => updateImage(frameIndex + 1))
+    });
+
+    // 이미지 미리 로드 실행
+    preloadImages()
+</script>
+</body>
+</html>
