@@ -1,13 +1,13 @@
 function test1() {
     console.log("Hello, World!");
 
-    const greeting=document.getElementById("greeting");
+    const greeting=document.getElementById("greeting") as HTMLElement;
     greeting.innerText="Hello, WOlrd!";
 
-    const titleElement=document.getElementById("main_text");
+    const titleElement=document.getElementById("main_text") as HTMLElement;
     titleElement.textContent="Main Text!";
 
-    const firstParagraphElement=document.querySelector(".content-text");
+    const firstParagraphElement=document.querySelector(".content-text") as HTMLElement;
     const allParagraphElement=document.querySelectorAll(".content-text");
     firstParagraphElement.textContent="YEAH";
 
@@ -18,21 +18,21 @@ function test1() {
 test1()
 
 function test2() {
-    const myButton=document.getElementById("myButton");
-    const messageElement=document.getElementById("message");
+    const myButton=document.getElementById("myButton")  as HTMLButtonElement;
+    const messageElement=document.getElementById("message") as HTMLElement;
 
     myButton.addEventListener("click", ()=> {
         messageElement.textContent=`Clicked At ${Date.now().valueOf()}`;
     })
 
-    const myInput=document.getElementById("myInput");
-    const inputElement=document.getElementById("inputValueDisplay");
+    const myInput=document.getElementById("myInput") as HTMLInputElement;
+    const inputElement=document.getElementById("inputValueDisplay") as HTMLElement;
 
     myInput.addEventListener("keyup", (e)=> {
         inputElement.textContent=`Key typing...`;
     })
 
-    const hoverBox=document.getElementById("hoverBox");
+    const hoverBox=document.getElementById("hoverBox") as HTMLElement;
     hoverBox.addEventListener("mouseover", ()=>{
         hoverBox.style.backgroundColor="coral";
         hoverBox.textContent='mouse is on here'
