@@ -1,5 +1,5 @@
 # apo2073.netlify.app
- * [LINK](apo2073.netlify.app)
+ * [LINK](https://apo2073.netlify.app)
 
 |  path   | value |
 |:-------:|:-----:|
