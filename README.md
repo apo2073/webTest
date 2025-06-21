@@ -9,4 +9,5 @@
 ### ⚙ TODO
  - [x] comment
  - [x] webgl
+ - [x] simple game
  - [ ] something
