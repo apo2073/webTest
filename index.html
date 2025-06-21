@@ -198,7 +198,6 @@
                                 .forEach(({ username, comment, timestamp }) => {
                                     const item = document.createElement("div");
                                     item.className = "comment-item";
-                                    const dateStr = new Date(timestamp).toLocaleString();
                                     item.innerHTML = `<strong>${username}</strong>: ${comment}`;
                                     commentList.appendChild(item);
                                 });
@@ -213,11 +212,10 @@
                     hidden="hidden"
                     width="0"
                     height="0"
-                    src="https://www.youtube.com/embed/dvhc-s6XHbg?autoplay=1&loop=1&controls=0&mute=0"
+                    src="https://www.youtube.com/embed/RpkLxZpr1mo?autoplay=1&loop=1&controls=0&mute=0"
                     allow="autoplay"
             ></iframe>
         </div>
-
 
         <footer>
             <p class="foot">apo2073@outlook.com</p>
