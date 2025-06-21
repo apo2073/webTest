@@ -92,15 +92,19 @@ function consoleCode() {
             content.id='console-log'
             if (command=="help" || command=="?") {
                 result.textContent="repo  - redirect to this site's github repo" +
-                    "\ngithub  - redirect to owner's github" +
-                    "\nhelp  - show this"
+                    "\ngithub  - redirect to owner's github"
+            } else if (command=="repo") {
+                result.textContent="redirecting..."
+                window.location.href=`https://github.com/apo2073/webTest`
+            } else if(command=="github") {
+                result.textContent="redirecting to github..."
+                window.location.href=`https://github.com/apo2073`
             } else {
-                result.textContent=eval(command)
-            }
-            switch (command) {
-                case "repo":
-                    window.location.href=`https://github.com/apo2073/popolio`
-                    break
+                try {
+                    result.textContent=eval(command)
+                } catch (e) {
+                    result.textContent='help to \'help\' or \'?\'';
+                }
             }
             content.textContent=` > ${command}`;
 
