@@ -31,15 +31,29 @@
     z-index: 1;
     padding: 2rem;
 }
-#mosaic-canvas {
+#mosaic-overlay {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
+    background: rgba(255, 255, 255, 0.75);
+    filter: blur(90px);
     z-index: 1100;
     pointer-events: none;
+    animation: fadeSlideDown 1.5s ease-out forwards;
 }
 
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
 body {
     background-color: #211f2f;
 }

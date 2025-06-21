@@ -90,7 +90,18 @@ function consoleCode() {
             let content=document.createElement("p")
             let result=document.createTextNode("p");
             content.id='console-log'
-            result.textContent=eval(command)
+            if (command=="help" || command=="?") {
+                result.textContent="repo  - redirect to this site's github repo" +
+                    "\ngithub  - redirect to owner's github" +
+                    "\nhelp  - show this"
+            } else {
+                result.textContent=eval(command)
+            }
+            switch (command) {
+                case "repo":
+                    window.location.href=`https://github.com/apo2073/popolio`
+                    break
+            }
             content.textContent=` > ${command}`;
 
             consoleContent.appendChild(content);

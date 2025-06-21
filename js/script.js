@@ -80,7 +80,12 @@ function consoleCode() {
             var content = document.createElement("p");
             var result = document.createTextNode("p");
             content.id = 'console-log';
-            result.textContent = eval(command);
+            if (command == "help" || command == "?") {
+                result.textContent = "repo  - redirect to this site's github repo\ngithub  - redirect to owner's github";
+            }
+            else {
+                result.textContent = eval(command);
+            }
             content.textContent = " > ".concat(command);
             consoleContent.appendChild(content);
             consoleContent.appendChild(result);
