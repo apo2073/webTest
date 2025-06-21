@@ -35,7 +35,7 @@ function hoverCode() {
     var contentK = kotlinCode.textContent;
     kotlinCode.addEventListener("mouseover", function () {
         kotlinCode.classList.replace('language-kotlin', 'language-typescript');
-        kotlinCode.textContent = '   function main() {\n   \tconst hello:String=\'Hello\';\n   \tconsole.log(`$\{hello\}, World!`);\n   }';
+        kotlinCode.textContent = '   function main() {\n   \tconst hello:string=\'Hello\';\n   \tconsole.log(`$\{hello\}, World!`);\n   }';
         // hljs.highlightAll();
         window.hljsAll();
     });

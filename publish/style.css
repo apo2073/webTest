@@ -12,6 +12,12 @@
     user-select: none;
 }
 
+.logo {
+    vertical-align: middle;
+    align-items: center;
+    gap: 1rem;
+}
+
 .circle-cursor {
     position: fixed;
     top: 0;
