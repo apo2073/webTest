@@ -185,9 +185,10 @@ body {
     margin-bottom: 50px;
 }
 
-#webglCanvas {
+#webglCanvas, #yeah {
     background-color: #000;
     border-radius: 20px;
+    margin: 20px;
 }
 
 .github /*div*/, .github img {

@@ -6,7 +6,7 @@ let vx = 0.01, vy = 0.008;
 let isDragging = false;
 let lastMouseX = 0, lastMouseY = 0;
 
-window.onload = () => {
+window.addEventListener("load", ()=> {
     const canvas = document.getElementById("webglCanvas") as HTMLCanvasElement;
     if (!canvas) {
         console.error("Canvas element not found.");
@@ -164,7 +164,7 @@ window.onload = () => {
 
     drawScene();
     animate();
-};
+})
 
 function initWebGL(canvas: HTMLCanvasElement): WebGLRenderingContext | null {
     let context: WebGLRenderingContext | null = null;

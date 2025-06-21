@@ -4,7 +4,7 @@ var dx = 0.0, dy = 0.0;
 var vx = 0.01, vy = 0.008;
 var isDragging = false;
 var lastMouseX = 0, lastMouseY = 0;
-window.onload = function () {
+window.addEventListener("load", function () {
     var canvas = document.getElementById("webglCanvas");
     if (!canvas) {
         console.error("Canvas element not found.");
@@ -119,7 +119,7 @@ window.onload = function () {
     }
     drawScene();
     animate();
-};
+});
 function initWebGL(canvas) {
     var context = null;
     try {
